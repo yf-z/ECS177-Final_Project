@@ -1,0 +1,62 @@
+%% 20 u-verbs
+dictionary([a],[u], [uverb]).
+dictionary([h, a, n, a], [s, u], [uverb]).
+dictionary([u, k, a, g, a], [u], [uverb]).
+dictionary([a, y, a, m, a], [r, u], [uverb]).
+dictionary([o, k, u], [r, u], [uverb]).
+dictionary([e, r, a], [b, u], [uverb]).
+dictionary([n, a], [k, u], [uverb]).
+dictionary([k, a], [k, u], [uverb]).
+dictionary([o, m, o], [u], [uverb]).
+dictionary([k, a, z, e, w, o, h, i], [k, u], [uverb]).
+dictionary([k, i, g, a, t, s, u], [k, u], [uverb]).
+dictionary([k,a],[t,s,u],[uverb]).
+dictionary([k,i],[k,u],[uverb]).
+dictionary([k,e],[s,u],[uverb]).
+dictionary([k,o,m,a], [r,u], [uverb]).
+dictionary([k,o],[m,u],[uverb]).
+dictionary([s,a,g,a],[s,u],[uverb]).
+dictionary([s,a],[k,u],[uverb]).
+dictionary([s,a,s,o],[u],[uverb]).
+dictionary([s,h,i,m,a],[r,u],[uverb]).
+
+%% 20 ru-verbs
+dictionary([k,i,g,a,e],[r,u], [ruverb]).
+dictionary([o,b,o,e],[r,u], [ruverb]).
+dictionary([k,a,r,i],[r,u], [ruverb]).
+dictionary([o,s,h,i,e],[r,u], [ruverb]).
+dictionary([k,i,m,e],[r,u],[ruverb]).
+dictionary([k,u,r,a,b,e],[r,u],[ruverb]).
+dictionary([k,i,r,e],[r,u],[ruverb]).
+dictionary([k,o,t,a,e],[r,u],[ruverb]).
+dictionary([k,o,w,a,r,e],[r,u],[ruverb]).
+dictionary([a,g,e],[r,u],[ruverb]).
+dictionary([s,h,i,m,e],[r,u],[ruverb]).
+dictionary([m,i],[r,u],[ruverb]).
+dictionary([s,u,t,e],[r,u],[ruverb]).
+dictionary([s,o,d,a,t,e],[r,u],[ruverb]).
+dictionary([s,o,m,e],[r,u],[ruverb]).
+dictionary([t,a,s,u,k,e],[r,u],[ruverb]).
+dictionary([d,e],[r,u],[ruverb]).
+dictionary([n,a,r,e],[r,u],[ruverb]).
+dictionary([m,a,k,e],[r,u],[ruverb]).
+dictionary([m,i,t,s,u,k,e],[r,u],[ruverb]).
+
+%% 10 irregular verbs
+dictionary([],[s,u,r,u], [irregular]).
+dictionary([],[k,u,r,u], [irregular]).
+dictionary([b,e,n,k,y,o,u],[s,u,r,u], [irregular]).
+dictionary([r,y,o,u,r,i],[s,u,r,u], [irregular]).
+dictionary([k,a,i,m,o,n,o],[s,u,r,u], [irregular]).
+dictionary([s,o,u,j,i],[s,u,r,u], [irregular]).
+dictionary([g,a,m,a,n],[s,u,r,u], [irregular]).
+dictionary([k,a,o,w,o],[s,u,r,u], [irregular]).
+dictionary([g,a,k,k,a,r,i],[s,u,r,u], [irregular]).
+dictionary([p,a,n,n,k,u],[s,u,r,u], [irregular]).
+dictionary([y,u,u,s,h,o,u],[s,u,r,u], [irregular]).
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+:-['dictionaryForm.swipl'].
+:-['removeLast.swipl'].
+
+%% construct a te-form from a ru-verb
+teForm(A, [t,e]) :-
+	dictionary(A, [r,u], [ruverb]).
+
+%% construct a te-form from a u-verb
+teForm(A, [t,t,e]) :-
+	dictionary(A, [u], [uverb]).
+
+teForm(A, [t,t,e]) :-
+	dictionary(A, [t,s,u], [uverb]).
+
+teForm(A, [t,t,e]) :-
+	dictionary(A, [r,u], [uverb]).
+
+teForm(A, [n,n,d,e]) :-
+	dictionary(A, [m,u], [uverb]).
+
+teForm(A, [n,n,d,e]) :-
+	dictionary(A, [b,u], [uverb]).
+
+teForm(A, [n,n,d,e]) :-
+	dictionary(A, [n,u], [uverb]).
+
+teForm(A, [i,t,e]) :-
+	dictionary(A, [k,u], [uverb]).
+
+teForm([i], [t,t,e]) :-
+	dictionary([i], [k,u], [uverb]).
+
+teForm(A, [i,d,e]) :-
+	dictionary(A, [g,u], [uverb]).
+
+teForm(A, [s,h,i,t,e]) :-
+	dictionary(A, [s,u], [uverb]).
+
+%% construct a te-form from a irregular verb
+teForm(A,[s,h,i,t,e]) :-
+	dictionary(A,[s,u,r,u], [irregular]).
+
+teForm(A,[k,i,t,e]) :-
+	dictionary(A,[k,u,r,u], [irregular]).

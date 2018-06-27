@@ -1,0 +1,21 @@
+:-['dictionaryForm.swipl'].
+:-['removeLast.swipl'].
+
+%% construct potential form of a ru-verb
+potential(A, B) :-
+	dictionary(A, C, [ruverb]),
+	remove_last(C,D),
+	append(D,[a,r,e,r,u],B).
+
+%% construct potential form of a u-verb
+potential(A, B) :-
+	dictionary(A, C, [uverb]),
+	remove_last(C,D),
+	append(D,[e,r,u],B).
+
+%% construct potential form of a irregular verb
+potential(A, [d,e,k,i,r,u]) :-
+	dictionary(A, [s,u,r,u], [irregular]).
+
+potential(A, [k,o,r,a,r,e,r,u]) :-
+	dictionary(A, [k,u,r,u], [irregular]).

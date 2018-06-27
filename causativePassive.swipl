@@ -1,0 +1,34 @@
+:-['dictionaryForm.swipl'].
+:-['removeLast.swipl'].
+
+%% construct a causative passive form from a ru-verb
+causativePassive(A, [s,a,s,e,r,a,r,e,r,u]) :-
+	dictionary(A, [r,u], [ruverb]).
+
+%% construct a causative passive form from a u-verb
+%% special u->wa, tsu->ta
+causativePassive(A, [w,a,s,a,r,e,r,u]) :-
+	dictionary(A, [u], [uverb]).
+
+causativePassive(A, [t,a,s,a,r,e,r,u]) :-
+	dictionary(A, [t,s,u], [uverb]).
+
+causativePassive(A, [s,a,s,e,r,a,r,e,r,u]) :-
+	dictionary(A, [s,u], [uverb]).
+
+%% regular cases
+causativePassive(A, B) :-
+	dictionary(A, C, [uverb]),
+	not(C == [u]),
+	not(C == [t,s,u]),
+	not(C == [s,u]),
+	remove_last(C,D),
+	append(D, [a,s,a,r,e,r,u], B).
+
+%% construct a causative passive form from a irregular verbs
+causativePassive(A, [s,a,s,e,r,a,r,e,r,u]) :-
+	dictionary(A, [s,u,r,u], [irregular]).
+
+causativePassive(A, [k,o,s,a,s,e,r,a,r,e,r,u]) :-
+	dictionary(A, [k,u,r,u], [irregular]).
+	

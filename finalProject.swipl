@@ -1,0 +1,35 @@
+%% dictionary form
+:-['dictionaryForm.swipl'].
+
+%% useful function
+:-['removeLast.swipl'].
+
+%% other forms
+:-['teForm.swipl'].
+:-['verbStem.swipl'].
+:-['extraModest.swipl'].
+:-['potential.swipl'].
+:-['causativePassive.swipl'].
+
+showDictionary(A,B,C) :-
+	dictionary(A,B,C).
+
+runAll(A,B) :-
+	print("verbStem"),
+	verbStem(A,B).
+
+runAll(A,B) :-
+	print("te-form"),
+	teForm(A,B).
+
+runAll(A,B) :-
+	print("potential form"),
+	potential(A,B).
+
+runAll(A,B) :-
+	print("extra modest form"),
+	extraModest(A,B).
+
+runAll(A,B) :-
+	print("causative passive form"),
+	causativePassive(A,B).

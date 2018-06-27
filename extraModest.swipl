@@ -1,0 +1,10 @@
+extraModest([i,r,u],[o,r,u]).
+extraModest([i,k,u],[m,a,i,r,u]).
+extraModest([k,u,r,u],[m,a,i,r,u]).
+extraModest([i,u],[m,o,s,u]).
+extraModest([s,u,r,u],[i,t,a,s,u]).
+extraModest([t,a,b,e,r,u], [i,t,a,d,a,k,u]).
+extraModest([n,o,m,u],[i,t,a,d,a,k,u]).
+extraModest([a,r,u],[g,o,z,a,r,u]).
+extraModest([t,e,i,r,u],[t,e,o,r,u]).
+extraModest([d,e,s,u],[d,e,g,o,z,a,r,u]).

@@ -1,0 +1,37 @@
+:-['dictionaryForm.swipl'].
+:-['removeLast.swipl'].
+
+%% construct a verb stem from a u-verb
+
+%% special cases 
+%% contruct from a u ended u-verb
+verbStem(A, [i]) :- 
+	dictionary(A, [u], [uverb]).
+
+%% contruct from a su ended u-verb
+verbStem(A, [s, h, i]) :-
+	dictionary(A, [s,u], [uverb]).
+
+%% contruct from a tsu ended u-verb
+verbStem(A, [c, h, i]) :-
+	dictionary(A, [t, s, u], [uverb]).
+
+%% contruct from regular u-verb
+verbStem(A, B) :-
+	dictionary(A, C, [uverb]),
+	not(C == [u]),
+	not(C == [s, u]),
+	not(C == [t, s, u]),
+	remove_last(C, D),
+	append(D, [i], B).
+
+%% construct a verb stem from a ru-verb
+verbStem(A,[]) :-
+	dictionary(A, [r,u], [ruverb]).
+
+%% construct a verb stem from a irregular-verb
+verbStem(A,[s,h,i]) :-
+	dictionary(A, [s,u,r,u],[irregular]).
+
+verbStem(A, [k,i]) :-
+	dictionary(A, [k,u,r,u], [irregular]).
